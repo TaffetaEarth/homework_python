@@ -1,5 +1,4 @@
 def many_lists(list_of):
-    i = 0
     default_set = set(list_of[0])
     for i in range(len(list_of)):
         default_set.intersection_update(list_of[i])

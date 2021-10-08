@@ -13,7 +13,7 @@ def relation(arr):
             equal += 1
         else:
             lower += 1
-    print("A>a " + str(int(upper/len(arr)*100)) + "%")
+    print("A>a " + str(int(upper/len(arr) * 100)) + "%")
     print("A=a " + str(int(equal / len(arr) * 100)) + "%")
     print("A<a " + str(int(lower / len(arr) * 100)) + "%")
 
@@ -23,7 +23,7 @@ def register_count(st):
     lower = 0
     for i in st:
         if i.isupper():
-             upper += 1
+            upper += 1
         else:
             lower += 1
     if upper > lower:
@@ -45,8 +45,7 @@ def arr_generation(n):
     arr = []
     for i in range(n):
         arr.append(string_generation(6))
-    print(arr)
     return arr
 
 
-relation(arr_generation(10))
+relation(arr_generation(1000))

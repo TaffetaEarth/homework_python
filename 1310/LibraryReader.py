@@ -1,9 +1,10 @@
 class Reader:
-    def __init__(self):
+    def __init__(self, n):
         self.__books = []
+        self.quan = n
 
     def take_book(self, bookname):
-        if len(self.__books) >= 2:
+        if len(self.__books) >= self.quan:
             print("Too many books already had been took")
         else:
             self.give_book(bookname)
@@ -26,14 +27,13 @@ class Reader:
 
 
 class ChildReader(Reader):
+    __books = []
+
     def take_book(self, bookname):
-        if len(self.__books) >= 1:
-            print("Too many books already had been took")
-        else:
-            super().take_book(bookname)
+        super().take_book(bookname)
 
 
-rd1 = ChildReader()
+rd1 = ChildReader(1)
 rd1.take_book("1984")
 rd1.take_book("Harry Potter")
 rd1.take_book("Lord of The Rings")

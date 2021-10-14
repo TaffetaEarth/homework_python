@@ -1,0 +1,2 @@
+New first string!
+New second string!

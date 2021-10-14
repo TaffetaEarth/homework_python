@@ -6,18 +6,6 @@ class Reader:
     def take_book(self, bookname):
         if len(self.__books) >= self.quan:
             print("Too many books already had been took")
-        else:
-            self.give_book(bookname)
-            print("Book", bookname, "has been took, the reader has", len(self.__books), "books")
-
-    def get_books(self):
-        print(self.__books)
-
-    def give_book(self, bookname):
-        if bookname in self.__books:
-            print("Book already was given")
-        else:
-            print("Book", bookname, "has been given")
             self.__books.append(bookname)
 
     def hand_over(self, bookname):

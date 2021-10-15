@@ -19,3 +19,4 @@ def text(text):
 f = open('top_words.txt', 'r')
 lines = ' '.join(f.readlines())
 text(lines)
+f.close()

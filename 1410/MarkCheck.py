@@ -7,3 +7,4 @@ for line in lines:
             print(line[:-2:1])
     else:
         print("Incorrect data!")
+f.close()

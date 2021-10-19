@@ -1,27 +1,22 @@
-import random
-
-
-def content(n, m):
-    matrix = [[]]
-    for i in range(n):
-        for j in range(m):
-            matrix[i][j].append(random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9]))
-    return matrix
-
-
 class Matrix:
-    def __init__(self, n, m):
-        self.n = n
-        self.m = m
-        self.content = content(self.n, self.m)
+    def __init__(self, matrix):
+        self.matrix = matrix
+        self.marker = False
+        if len(self.matrix[0]) != len([i for i in self.matrix]):
+            self.marker = True
+        else:
+            print("Матрица введена некорректно")
 
-    def transpose(self):
-        matrixt = [[]]
-        for i in range(self.n):
-            for j in range(self.m):
-                matrixt[j][i] = self.content[i][j]
-        return matrixt
+    def trans(self):
+        if self.marker:
+            n = len(self.matrix)
+            m = len(self.matrix[0])
+            for i in range(m):
+                for j in range(n):
+                    print(self.matrix[j][i], end=' ')
+                print()
 
 
-mat = Matrix(3, 4)
-print(mat.transpose())
+matrix1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 2, 3]])
+matrix1.trans()
+

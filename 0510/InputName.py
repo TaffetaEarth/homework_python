@@ -8,16 +8,17 @@ def abb(name):
     else:
         return 'False'
 
-def name_input()
-list_of_names = []
-while input() != "q":
-    b = [input(), input(), input()]
-    if abb(' '.join(b)):
-        list_of_names.append(abb(' '.join(b)))
-    else:
-        break
-        print("Error")
-print(list_of_names)
+
+def name_input():
+    list_of_names = []
+    while input() != "q":
+        b = [input(), input(), input()]
+        if abb(' '.join(b)):
+            list_of_names.append(abb(' '.join(b)))
+        else:
+            print("Error")
+            break
+    print(list_of_names)
 
 
 

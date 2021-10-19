@@ -2,7 +2,11 @@ class Matrix:
     def __init__(self, matrix):
         self.matrix = matrix
         self.marker = False
-        if len(self.matrix[0]) != len([i for i in self.matrix]):
+        k = 0
+        for i in range(len(matrix)):
+            if len(self.matrix[0]) == len(self.matrix[i]):
+                k += 1
+        if k == len(self.matrix):
             self.marker = True
         else:
             print("Матрица введена некорректно")

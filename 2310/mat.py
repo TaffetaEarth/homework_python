@@ -22,7 +22,7 @@ plt.grid(True)
 # pie()
 fig = plt.figure()
 plt.pie(x, labels=s)
-plt.title('Simple pie chart')
+plt.title('Simple pie c hart')
 
 # boxplot()
 fig = plt.figure()

@@ -44,5 +44,5 @@ def draw_pie(*args):
     plt.show()
 
 
-# many_graphics_creator([[1, 2, 3, 4, 5, 6, 7], [6, 7, 8, 4, 5, 9, 3]], color_1="r")
-many_bars_creator(["First", 2], ["Second", 3], color_1="r", color_2="g")
+many_graphics_creator([[1, 2, 3, 4, 5, 6, 7], [6, 7, 8, 4, 5, 9, 3]], [[4, 44, 67, 3], [5, 7, 8, 56]], color_1="r")
+# many_bars_creator(["First", 2], ["Second", 3], color_1="r", color_2="g")

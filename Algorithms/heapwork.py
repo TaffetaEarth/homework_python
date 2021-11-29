@@ -1,6 +1,6 @@
 import heapq as hp
 import random
-
+import time
 
 def heapify(x):
     def heapify_inner(nums, heapsize, root_index):
@@ -52,17 +52,21 @@ def heap_remove(heap):
                 i = 2 * i + 2
         else:
             break
-    if 2 * i + 1 == len(heap) and heap[i] > heap[2 * i + 1]:
-        heap[i], heap[2 * i + 1] = heap[2 * i + 1], heap[i]
+    if 2 * i + 1 == len(heap) - 1:
+        if heap[i] > heap[2 * i + 1]:
+            heap[i], heap[2 * i + 1] = heap[2 * i + 1], heap[i]
     return heap
 
-
-a = [random.randrange(0, 100) for _ in range(30)]
-hp.heapify(a)
-print(a)
-b = heap_remove(a)
-print(b)
-hp.heapify(b)
-print(b)
+while True:
+    a = [random.randrange(0, 100) for _ in range(30)]
+    hp.heapify(a)
+    print(a)
+    b = heap_remove(a)
+    print(b)
+    c = b.copy()
+    hp.heapify(b)
+    print(b)
+    print(b == c)
+    time.sleep(0.5)
 
 

@@ -2,6 +2,7 @@ import heapq as hp
 import random
 import time
 
+
 def heapify(x):
     def heapify_inner(nums, heapsize, root_index):
         largest = root_index
